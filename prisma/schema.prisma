@@ -15,10 +15,8 @@ datasource db {
 }
 
 model Tenant {
-  id          String   @id @default(uuid())
-  name        String
-  subdomain   String   @unique
-  createdAt   DateTime @default(now())
-  identityId  String?  @unique // ✅ Make it optional for now
+  id         String   @id @default(uuid())
+  name       String
+  subdomain  String   @unique
+  createdAt  DateTime @default(now())
 }
-
